@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Challenge: encriptador de texto</title>
+        <link rel="stylesheet" href="styles/style.css">
+    </head>
+    <body>
+        <main class="encriptador">
+            <img class="encriptador__imagem" src="imagens/Alura@2x.png" alt="Logo da Alura" id="img__desktop">
+            <img class="encriptador__imagem" src="imagens/Alura_tablet.svg" alt="Logo da Alura" id="img__tablet">
+            <div class="encriptador__textocaixa">
+                <textarea class="encriptador__texto" placeholder="Digite seu texto" style="resize: none;" id="texto"></textarea>                
+                <div class="encriptador__aviso">
+                    <img class="encriptador__aviso__imagem" src="imagens/aviso.png" alt="icone de aviso" style="width: 1em;height: 1em;">
+                    <p class="encriptador__aviso__texto">Apenas letras minúsculas e sem acento.</p>
+                </div>
+                <div class="encriptador__botoes__caixa">
+                    <button onclick="cript()" class="encriptador__botoes__cript">Criptografar</button>
+                    <button onclick="decript()" class="encriptador__botoes__descript">Descriptografar</button>
+                </div>
+            </div>
+            <div class="encriptador__textoencriptado">
+                <div class="encriptador__textoencriptado__semtexto" id="semtexto" style="display: initial;">
+                    <img class="encriptador__textoencriptado__imagem" src="imagens/Buscando texto.svg" alt="imagem buscando texto">
+                    <p class="encriptador__textoencriptado__texto1">Nenhuma mensagem encontrada</p>
+                    <p class="encriptador__textoencriptado__texto2">Digite um texto que você deseja criptografar ou descriptografar.</p>
+                </div>
+                <div class="encriptador__textoencriptado__comtexto" id="comtexto" style="display: none;">
+                    <p class="encriptador__textoencriptado__resultado" style="resize: none;" id="resultado"></p>
+                    <button onclick="copy()" class="encriptador__textoencriptado__copiar" id="copiar">Copiar</button>
+                </div>
+            </div>
+        </main>
+
+        <script src="app.js" defer></script>
+    </body>
+    <footer>
+        <p class="footer__texto1">Desenvolvido por Pedro de Oliveira</p>
+        <div class="footer__links">
+            <a class="footer__anchor" href="https://github.com/bimask8">
+                <img class="footer__links__link" src="imagens/Github.png" alt="Logo do GitHub">
+            </a>
+        </div>
+    </footer>
+</html>

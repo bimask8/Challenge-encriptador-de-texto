@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+/*Variáveis*/
+
+:root {
+    --cor-background: #E5E5E5;
+    --cor-primaria: #0A3871;
+    --cor-secundaria: #D8DFE8;
+    --cor-terciaria: white;
+    --cor-aviso: #495057;
+
+    --fonte-inter: 'Inter', sans-serif;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+body{
+    background-color: var(--cor-background);
+    padding: unset;
+    height: 90%;
+}
+
+.encriptador{
+    padding: 2.5em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5em;
+}
+
+/*Imagem da Alura*/
+
+.encriptador__imagem{
+    align-self: flex-start;
+    width: 7.5em;
+    height: 3em;
+}
+
+#img__tablet{
+    display: none;
+}
+
+/*Caixa do texto a ser inserido*/
+
+.encriptador__textocaixa{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    width: 55%;
+    height: 94%;
+}
+
+.encriptador__texto{
+    background: none;
+    border-style: none;
+    font-family: var(--fonte-inter);
+    font-size: 2em;
+    font-weight: 400;
+    color: var(--cor-primaria);
+    margin-top: 2em;
+}
+
+.encriptador__aviso{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    gap: 0.5em;
+    height: 1.125em;
+    font-family: var(--fonte-inter);
+    font-size: 0.75em;
+    font-weight: 400;
+    color: var(--cor-aviso);
+}
+
+.encriptador__botoes__caixa{
+    display: flex;
+    justify-content: space-between;
+    gap: 1.125em;
+    width: 100%;
+    height: fit-content;
+}
+
+button{
+    border-radius: 1.5em;
+    height: 4em;
+}
+
+.encriptador__botoes__cript{
+    background-color: var(--cor-primaria);
+    font-family: var(--fonte-inter);
+    font-size: 1em;
+    font-weight: 400;
+    color: var(--cor-terciaria);
+}
+
+.encriptador__botoes__descript{
+    background-color: var(--cor-secundaria);
+    font-family: var(--fonte-inter);
+    font-size: 1em;
+    font-weight: 400;
+    color: var(--cor-primaria);
+}
+
+/*Texto trabalhado*/
+
+.encriptador__textoencriptado{
+    background-color: var(--cor-terciaria);
+    border-radius: 2em;
+    width: 22.5%;
+    box-shadow: 0.5em 1em 0.5em 0.5em lightgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.encriptador__textoencriptado__semtexto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: fit-content;
+    width: 100%;
+    padding: 2em;
+    text-align: center;
+    position: absolute;
+}
+
+.encriptador__textoencriptado__imagem{
+    height: 70%;
+    margin-bottom: 1em;
+}
+
+.encriptador__textoencriptado__texto1{
+    font-family: var(--fonte-inter);
+    font-size: 1.25em;
+    font-weight: 700;
+    color: var(--cor-primaria);
+    text-justify: center;
+    height: fit-content;
+    padding-bottom: 1em;
+}
+
+.encriptador__textoencriptado__texto2{
+    font-family: var(--fonte-inter);
+    font-size: 0.75em;
+    font-weight: 400;
+    color: var(--cor-primaria);
+    height: fit-content;
+}
+
+.encriptador__textoencriptado__comtexto{
+    display: flex;
+    flex-direction: column;
+}
+
+.encriptador__textoencriptado__resultado{
+    background: none;
+    border-style: none;
+    font-family: var(--fonte-inter);
+    font-size: 1.5em;
+    font-weight: 400;
+    color: var(--cor-primaria);
+    margin: 10%;
+    margin-bottom: 5em;
+    width: 80%;
+    overflow-y: scroll;
+    word-break: keep-all;
+    word-wrap: break-word;
+}
+
+.encriptador__textoencriptado__copiar{
+    background-color: var(--cor-terciaria);
+    font-family: var(--fonte-inter);
+    font-size: 1em;
+    font-weight: 400;
+    color: var(--cor-primaria);
+    width: 80%;
+    margin: 0 10%;
+    position: absolute;
+    bottom: 2em;
+}
+
+/*Footer*/
+
+footer{
+    position: fixed;
+    max-height: 10%;
+    column-width: 100%;
+    background-color: var(--cor-secundaria);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer__texto1{
+    max-height: 50%;
+    padding-top: 0.5em;
+    font-family: var(--fonte-inter);
+    font-size: 1em;
+    font-weight: 700;
+    color: var(--cor-primaria);
+}
+
+.footer__links{
+    max-height: 40%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1.25em;
+}
+
+.footer__links__link, .footer__anchor{
+    width: auto;
+}
+
+@media (max-width: 1070px) {
+
+    *{
+        height: 100%;
+    }
+    
+    body{
+        height: 90%;
+    }
+    
+    .encriptador{
+        display: flex;
+        flex-direction: column;
+        gap: 3em;
+    }
+
+    /*Imagem da Alura*/
+
+    #img__desktop{
+        display: none;
+    }
+
+    #img__tablet{
+        display: initial;
+    }
+
+    .encriptador__imagem{
+        width: 2em;
+        min-height: 3em;
+        max-height: fit-content;
+    }
+
+    /*Caixa do texto a ser inserido*/
+
+    .encriptador__textocaixa{
+        width: 100%;
+        min-height: 50%;
+    }
+
+    .encriptador__texto{
+        margin: 0;
+        overflow-y: auto;
+    }
+
+    /*Texto trabalhado*/
+
+    .encriptador__textoencriptado{
+        width: 100%;
+        height: fit-content;
+        max-height: 35%;
+    }
+
+    .encriptador__textoencriptado__semtexto{
+        height: 8.25em;
+        position: relative;
+        height: inherit;
+    }
+
+    .encriptador__textoencriptado__imagem{
+        display: none;
+    }
+
+    .encriptador__textoencriptado__resultado{
+        margin: 5%;
+        margin-bottom: 5em;
+        width: 90%;
+        height: 70%;
+    }
+
+    .encriptador__textoencriptado__copiar{
+        width: 90%;
+        margin: 0 5%;
+    }
+
+    footer{
+        height: 10%;
+    }
+}
+
+@media (max-width: 375px) {
+    .encriptador{
+        padding: 1em;
+        gap: 1em;
+    }
+}
